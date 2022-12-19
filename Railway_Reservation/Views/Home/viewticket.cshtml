@@ -1,0 +1,59 @@
+﻿
+@model IEnumerable<Railway_Reservation.Models.Reservation>
+
+
+@{
+    ViewBag.Title = "View Ticket";
+}
+
+<h2>Ticket</h2>
+
+<table class="table">
+    <tr>
+        
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Res_Name)
+        </th>
+        <th>
+        @Html.DisplayNameFor(model => model.QuotaType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Res_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PNR_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seat_No)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Res_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuotaType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Res_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PNR_NO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Seat_No)
+            </td>
+
+
+        </tr>
+    }
+
+</table>
